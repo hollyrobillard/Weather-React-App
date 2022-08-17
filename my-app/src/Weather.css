@@ -1,0 +1,168 @@
+.Weather .card {
+    display: block;
+    margin: 20px auto;
+    width: 500px;
+}
+
+.Weather .card-title {
+    text-align: center;
+    color: rgb(29, 119, 192);
+    font-weight: bold;
+}
+
+.Weather .search-container {
+    display: flex;
+    justify-content: start;
+}
+
+.Weather ::placeholder {
+    color: black;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.Weather .search {
+    background-color: rgb(29, 119, 192);
+    color: white;
+    border-radius: 4px;
+    font-size: small;
+    padding: 4px 10px;
+    margin-left: 5px;
+    border-color: rgb(29, 119, 192);
+}
+
+.Weather .city-search {
+    display: inline-block;
+}
+
+.Weather .refresh {
+    background-color: rgb(23, 172, 147);
+    color: white;
+    border-radius: 4px;
+    font-size: small;
+    padding: 4px 10px;
+    margin-left: 5px;
+    border-color: rgb(23, 172, 147);
+}
+
+.Weather .favorites {
+    font-weight: bold;
+    text-align: left;
+}
+
+.Weather .favorite1,
+.Weather .favorite2,
+.Weather .favorite3 {
+    color: rgb(29, 119, 192);
+}
+
+.Weather .col-2,
+.Weather .col-3 {
+    color: rgb(29, 119, 192);
+    font-size: 15px;
+}
+
+.Weather hr {
+    height: 5px;
+    border-top: 3px solid rgb(29, 119, 192);
+}
+
+.Weather .city {
+    color: rgb(23, 172, 147);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.Weather .subheading {
+    font-weight: bold;
+    font-size: 17px;
+    text-align: left;
+}
+
+.Weather .weatherDesc {
+    font-size: 13px;
+    color: rgb(23, 172, 147);
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.Weather .currentWeather {
+    font-weight: bold;
+    font-size: 35px;
+    color: rgb(29, 119, 192);
+    text-align: left;
+}
+
+.Weather .col-12 {
+    padding-right: 0;
+    text-align: left;
+}
+
+.Weather .tempUnits {
+    font-size: 12px;
+    position: relative;
+    top: -16px;
+    left: 8px;
+}
+
+.Weather .fahrenheit:hover,
+.Weather .celcius:hover {
+    text-decoration: none;
+    color: rgb(23, 172, 147);
+}
+
+.Weather a:link {
+    color: rgb(29, 119, 192);
+}
+
+.Weather .lastUpdated {
+    color: rgb(23, 172, 147);
+    font-size: 12px;
+    text-align: left;
+}
+
+.Weather .suggestion {
+    font-weight: bold;
+    color: rgb(23, 172, 147);
+    font-size: 12px;
+}
+
+.Weather .precipWind {
+    font-style: italic;
+    font-size: 11px;
+}
+
+.Weather .week {
+    color: rgb(23, 172, 147);
+    font-size: 15px;
+    text-align: center;
+}
+
+.Weather .forecastDate {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Weather .forecastTemp {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+}
+
+.Weather .forecastTempMin {
+    opacity: 0.6;
+}
+
+.Weather .subtext {
+    color: rgb(29, 119, 192);
+    font-style: italic;
+    font-size: 11px;
+    text-align: left;
+}
+
+.Weather .footerLink {
+    color: rgb(23, 172, 147);
+}
