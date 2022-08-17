@@ -1,5 +1,5 @@
 # Weather-React-App
 
-This weather search engine is created using React! Enjoy!
+This weather search engine was created using React! Enjoy!
 
 ☀☀☀☀☀
