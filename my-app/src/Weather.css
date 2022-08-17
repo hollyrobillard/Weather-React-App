@@ -2,6 +2,8 @@
     display: block;
     margin: 20px auto;
     width: 500px;
+    background-color: white;
+    border: solid 1px rgb(23, 172, 147);
 }
 
 .Weather .card-title {
@@ -164,5 +166,5 @@
 }
 
 .Weather .footerLink {
-    color: rgb(23, 172, 147);
+    color: rgb(23, 172, 147)!important;
 }
