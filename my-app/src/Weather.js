@@ -106,7 +106,7 @@ export default function Weather() {
           <br />
           <div className="subtext">
             <a
-              href="https://jazzy-dragon-89cbdc.netlify.app/"
+              href="https://fascinating-empanada-30afeb.netlify.app/"
               className="footerLink"
             >
               <span>Site </span>
