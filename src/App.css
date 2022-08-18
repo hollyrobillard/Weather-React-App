@@ -5,3 +5,25 @@
   padding-bottom: 80px;
   background-image: linear-gradient(rgb(29, 119, 192), white) ;
 }
+
+.App .Card {
+  display: block;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  width: 500px;
+  background-color: white;
+  border: solid 1px rgb(23, 172, 147);
+  border-radius: 4px;
+}
+
+.App .subtext {
+  color: rgb(29, 119, 192);
+  font-style: italic;
+  font-size: 11px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.App .footerLink {
+  color: rgb(23, 172, 147) !important;
+}
