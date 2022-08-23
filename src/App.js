@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="Card">
-        <Weather />
+        <Weather defaultCity="New York"/>
         <footer>
           <div className="subtext">
             <a
