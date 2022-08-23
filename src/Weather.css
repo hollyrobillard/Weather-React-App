@@ -94,6 +94,10 @@
     text-align: left;
 }
 
+.Weather canvas {
+    margin: auto 10px auto 0px;
+}
+
 .Weather .tempUnits {
     font-size: 12px;
     position: relative;
