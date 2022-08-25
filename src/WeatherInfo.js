@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
+import Suggestions from "./Suggestions";
 
 export default function WeatherInfo(props) {
     return(
@@ -28,7 +29,7 @@ export default function WeatherInfo(props) {
                 <div className="row">
                   <div className="col-12">
                     <div className="suggestion">
-                      Suggestion: Don't forget your umbrella!
+                     <Suggestions description={props.data.description}/>
                     </div>
                   </div>
                 </div>
