@@ -3,14 +3,13 @@ import axios from "axios";
 import "./Weather.css";
 
 import WeatherInfo from "./WeatherInfo";
+import FavoriteCities from "./FavoriteCities";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState ({ready: false});
   const [city, setCity] = useState(props.defaultCity);
 
   function getWeather(response) {
-    console.log(response.data);
     setWeatherData({
         ready: true,
         city: response.data.name,
@@ -21,7 +20,6 @@ export default function Weather(props) {
         humidity: response.data.main.humidity,
         wind: Math.round(response.data.wind.speed)
     });
-    setReady(true);
   }
 
   function search() {
@@ -59,23 +57,7 @@ export default function Weather(props) {
             </div>
             <br />
             <p className="favorites">Favorites</p>
-            <div className="row">
-              <div className="col-2">
-                <a href="/" className="favorite1">
-                  London
-                </a>
-              </div>
-              <div className="col-2">
-                <a href="/" className="favorite2">
-                  Tokyo
-                </a>
-              </div>
-              <div className="col-3">
-                <a href="/" className="favorite3">
-                  New York
-                </a>
-              </div>
-            </div>
+            <FavoriteCities />
             <hr />
             <WeatherInfo data={weatherData}/>
         </div>

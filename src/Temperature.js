@@ -19,7 +19,7 @@ export default function Temperature(props) {
 
     if (unit === "fahrenheit") {
         return (
-            <span classnName="tempDisplay">
+            <span className="tempDisplay">
                 <span className="currentTemp">
                     {props.fahrenheit}
                 </span>
@@ -36,7 +36,7 @@ export default function Temperature(props) {
         )
     } else {
         return (
-            <span classnName="tempDisplay">
+            <span className="tempDisplay">
                 <span className="currentTemp">
                     {celciusMath()}
                 </span>
