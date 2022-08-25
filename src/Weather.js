@@ -53,6 +53,17 @@ export default function Weather(props) {
       setCity("Berlin");
       search(city);
   }
+
+  function currentGeolocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(currentCitySearch)
+  }
+
+  function currentCitySearch(position) {
+    let apiKey = "c6f246d160dbacfbf41c2c13d3cb1b49";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(getWeather);
+  }
   
   if (weatherData.ready) {
      return (
@@ -70,7 +81,7 @@ export default function Weather(props) {
                 />
                 <button className="search">Search</button>
               </form>
-              <button className="refresh">Refresh Current City</button>
+              <button className="refresh" onClick={currentGeolocation}>Refresh Current City</button>
             </div>
             <br />
             <p className="favorites">Favorites</p>
