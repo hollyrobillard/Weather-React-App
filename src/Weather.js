@@ -3,7 +3,6 @@ import axios from "axios";
 import "./Weather.css";
 
 import WeatherInfo from "./WeatherInfo";
-import FavoriteCities from "./FavoriteCities";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState ({ready: false});
@@ -36,6 +35,24 @@ export default function Weather(props) {
   function cityChange (event) {
     setCity(event.target.value);
   }
+
+    function changeToLondon(event) {
+      event.preventDefault();
+      setCity("London");
+      search(city);
+  }
+
+  function changeToTokyo(event) {
+      event.preventDefault();
+      setCity("Tokyo");
+      search(city);
+  }
+
+  function changeToBerlin(event) {
+      event.preventDefault();
+      setCity("Berlin");
+      search(city);
+  }
   
   if (weatherData.ready) {
      return (
@@ -57,9 +74,25 @@ export default function Weather(props) {
             </div>
             <br />
             <p className="favorites">Favorites</p>
-            <FavoriteCities />
-            <hr />
-            <WeatherInfo data={weatherData}/>
+            <div className="row">
+              <div className="col-2">
+                  <a href="/" className="favorite" onClick={changeToLondon}>
+                  London
+                  </a>
+              </div>
+              <div className="col-2">
+                  <a href="/" className="favorite" onClick={changeToTokyo}>
+                  Tokyo
+                  </a>
+              </div>
+              <div className="col-3">
+                  <a href="/" className="favorite" onClick={changeToBerlin}>
+                  Berlin
+                  </a>
+              </div>
+          </div>
+          <hr />
+          <WeatherInfo data={weatherData}/>
         </div>
       </div>
     );

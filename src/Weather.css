@@ -44,10 +44,12 @@
     text-align: left;
 }
 
-.Weather .favorite1,
-.Weather .favorite2,
-.Weather .favorite3 {
+.Weather .favorite {
     color: rgb(29, 119, 192);
+}
+
+ .Weather .favorite:hover {
+    color: rgb(23, 172, 147);
 }
 
 .Weather .col-2,
