@@ -82,6 +82,7 @@
     color: rgb(23, 172, 147);
     text-transform: capitalize;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .Weather .currentWeather {
