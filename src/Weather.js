@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState ({ready: false});
@@ -12,6 +13,7 @@ export default function Weather(props) {
     setWeatherData({
         ready: true,
         city: response.data.name,
+        coords: response.data.coord,
         date: new Date(response.data.dt * 1000),
         description: response.data.weather[0].description,
         icon: response.data.weather[0].icon,
@@ -85,6 +87,7 @@ export default function Weather(props) {
             </div>
             <br />
             <p className="favorites">Favorites</p>
+            <p className="favorites-subtext">Double Click Below to Search</p>
             <div className="row">
               <div className="col-2">
                   <a href="/" className="favorite" onClick={changeToLondon}>
@@ -104,6 +107,7 @@ export default function Weather(props) {
           </div>
           <hr />
           <WeatherInfo data={weatherData}/>
+          <WeatherForecast coords={weatherData.coords}/>
         </div>
       </div>
     );

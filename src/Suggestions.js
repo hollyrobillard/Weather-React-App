@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Suggestions(props) {
     if (props.description.includes("snow")) {
         return("Wear your coat and gloves!")

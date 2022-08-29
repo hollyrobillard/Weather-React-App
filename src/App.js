@@ -13,6 +13,7 @@ export default function App() {
               href="https://fascinating-empanada-30afeb.netlify.app/"
               className="footerLink"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Site </span>
             </a>
@@ -21,6 +22,7 @@ export default function App() {
               href="https://www.linkedin.com/in/hollyrobillard/"
               className="footerLink"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Holly Robillard</span>
             </a>
@@ -30,6 +32,7 @@ export default function App() {
               href="https://github.com/hollyrobillard/Weather-React-App"
               className="footerLink"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Github</span>
             </a>
