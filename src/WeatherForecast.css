@@ -3,6 +3,10 @@
     margin: 15px auto 0 auto;
 }
 
+.forecastTempUnits {
+    margin-top: 20px;
+}
+
 .WeatherForecast-day {
     color: grey;
     margin-bottom: 5px;

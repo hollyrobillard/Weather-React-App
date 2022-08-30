@@ -25,7 +25,8 @@ export default function Weather(props) {
 
   function search(city) {
     let apiKey = "c6f246d160dbacfbf41c2c13d3cb1b49";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
+    let units = "imperial";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
     axios.get(apiUrl).then(getWeather);
   }
 
@@ -60,7 +61,8 @@ export default function Weather(props) {
 
   function currentCitySearch(position) {
     let apiKey = "c6f246d160dbacfbf41c2c13d3cb1b49";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+    let units = "imperial";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(getWeather);
   }
   
