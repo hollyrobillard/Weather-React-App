@@ -23,7 +23,7 @@ export default function Weather(props) {
     });
   }
 
-  function search() {
+  function search(city) {
     let apiKey = "c6f246d160dbacfbf41c2c13d3cb1b49";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
     axios.get(apiUrl).then(getWeather);
@@ -40,20 +40,17 @@ export default function Weather(props) {
 
     function changeToLondon(event) {
       event.preventDefault();
-      setCity("London");
-      search(city);
+      search("London");
   }
 
   function changeToTokyo(event) {
       event.preventDefault();
-      setCity("Tokyo");
-      search(city);
+      search("Tokyo");
   }
 
   function changeToBerlin(event) {
       event.preventDefault();
-      setCity("Berlin");
-      search(city);
+      search("Berlin");
   }
 
   function currentGeolocation(event) {
@@ -87,7 +84,6 @@ export default function Weather(props) {
             </div>
             <br />
             <p className="favorites">Favorites</p>
-            <p className="favorites-subtext">Double Click Below to Search</p>
             <div className="row">
               <div className="col-2">
                   <a href="/" className="favorite" onClick={changeToLondon}>
@@ -112,7 +108,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
+    search(city);
     return "Loading results...";
   }
 
